@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel>
+	<workbook>
+		<!-- sheet -->
+		<sheet>
+			<!-- sheet名称,如：sheet1 -->
+			<name></name>
+			<!-- 指标集 -->
+			<targets>
+				<!-- 指标 -->
+				<target>
+					<!-- 数据集ID -->
+					<dataSetID></dataSetID>
+					<!-- 数据起始行 -->
+					<startDataIndex></startDataIndex>
+					<!-- 写入方式：1代表单个单元格写入；2代表插入行或列；3代表追加行或列 -->
+					<writeway></writeway>
+					<!-- 写入方向：1代表纵向，2代表横向 -->
+					<writedirection></writedirection>
+					<!-- 过滤器：sql语句where后的子句 -->
+					<filter></filter>
+					<!-- 起始列坐标：excel列号，用大写字母表示 -->
+					<startColIndex></startColIndex>
+					<!-- 起始行坐标 ：excel行号，用数字表示 -->
+					<startRowIndex></startRowIndex>
+					<!-- 结束列坐标：excel列号，用大写字母表示 -->
+					<endColIndex></endColIndex>
+					<!-- 结束行坐标：excel行号，用数字表示，
+					如果endRowIndex与startColIndex相等，那么会遍历所有数据，如果不等，那么只遍历（endRowIndex-startColIndex）行-->
+					<endRowIndex></endRowIndex>
+					<!-- 
+					       单元格集合：C13，C15，C16，多个用英文逗号合开,格式为“列号（大写英文字母）+行号（数字）“；
+					       这里是指定单元格的集合，如果改值不为空，那么按照此集合赋值，上述起始和结束坐标无效  
+					-->
+					<cellList></cellList>
+					<!-- 字段集合 -->
+					<!-- 
+					    约定：字段名全部用双引号包裹；所有标点符号全部是英文半角输入法下的标点符号;所有的常量 用CS()包裹，，比如：CS(abc),CS(12)
+						1、字段名用英文双引号包裹，多个字段名用|分隔 
+						2、列中如果赋值是常量值，用[]包裹，常量值用"CS()"包裹,并且只包含一组""号，即只包含一个字段名， 如：["常量字段名"CS(abc)]、["常量字段名"CS(12)]、[CS(12)"常量字段名"] 
+						3、列中如果是函数表达式，用[]包裹，如：[add("字段A",'3')]、[concat("字段A",'a')] 
+						4、如果遇到空行货空列，则字段名为空即可，如："A"|"B"||"C" 
+						5、如果是表达式中包含常量值，比如：["字段名"-1](1不需要被包裹)、[concat('a',"字段名",'b')](a和b作为常量参数值也不需要包裹)
+						6、函数或表达式中的非字段参数，一律用单引号包裹，即js中参数传递的方式
+					-->
+					<fieldNames></fieldNames>
+				</target>
+			</targets>
+		</sheet>
+	</workbook>
+	<!-- 模板 -->
+	<template>
+		<!-- 模板名称 :excel文件的名称 -->
+		<name></name>
+		<suffix></suffix>
+		<!-- 模板文件内容：excel文件转换成base64之后的内容 -->
+		<content></content>
+		<!-- 文件输出路径 -->
+		<outPutDir></outPutDir>
+	</template>
+</excel>

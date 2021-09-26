@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel>
+	<workbook>
+		<!-- sheet -->
+		<sheet>
+			<!-- sheet名称,如：sheet1 -->
+			<name>sheet1</name>
+			<!-- 指标集 -->
+			<targets>
+				<!-- 指标 -->
+				<target>
+					<!-- 数据集ID -->
+					<dataSetID>data1</dataSetID>
+					<!-- 数据起始行 -->
+					<startDataIndex>0</startDataIndex>
+					<!-- 写入方式：1代表单个单元格写入；2代表插入行或列；3代表追加行或列 -->
+					<writeway>1</writeway>
+					<!-- 写入方向：1代表纵向，2代表横向 -->
+					<writedirection>1</writedirection>
+					<!-- 过滤器：sql语句where后的子句 -->
+					<filter></filter>
+					<!-- 起始列坐标：excel列号，用大写字母表示 -->
+					<startColIndex>C</startColIndex>
+					<!-- 起始行坐标 ：excel行号，用数字表示 -->
+					<startRowIndex>3</startRowIndex>
+					<!-- 结束列坐标：excel列号，用大写字母表示 -->
+					<endColIndex>C</endColIndex>
+					<!-- 结束行坐标：excel行号，用数字表示 -->
+					<endRowIndex>3</endRowIndex>
+					<!-- 字段集合 -->
+					<!-- 约定：字段名全部用双引号包裹;所有标点符号全部是英文半角输入法下的标点符号 
+						1、字段名用英文双引号包裹，多个字段名用|分隔
+						 2、列中如果赋值是常量值，用[]包裹，字段名和常量值用|分隔， 如：["常量字段名"|constStr(abc)]、["常量字段名"|constNum(12)]、[constNum(12)|"常量字段名"] 
+						3、列中如果是函数表达式，用[]包裹，如：[add("字段A",constNum(3))]、[concat("字段A",constStr(a))] 
+						4、如果要跨行或跨列展示，那么字段名为空即可，如："A"|"B"||"C" -->
+					<fieldNames>["本月基金数量"-1]|</fieldNames>
+				</target>
+				<!-- 指标 -->
+                <target>
+                    <!-- 数据集ID -->
+                    <dataSetID>data2</dataSetID>
+                    <!-- 数据起始行 -->
+                    <startDataIndex>0</startDataIndex>
+                    <!-- 写入方式：1代表单个单元格写入；2代表插入行或列；3代表追加行或列 -->
+                    <writeway>1</writeway>
+                    <!-- 写入方向：1代表纵向，2代表横向 -->
+                    <writedirection>2</writedirection>
+                    <!-- 过滤器：sql语句where后的子句 -->
+                    <filter></filter>
+                    <!-- 起始列坐标：excel列号，用大写字母表示 -->
+                    <startColIndex>D</startColIndex>
+                    <!-- 起始行坐标 ：excel行号，用数字表示 -->
+                    <startRowIndex>3</startRowIndex>
+                    <!-- 结束列坐标：excel列号，用大写字母表示 -->
+                    <endColIndex>D</endColIndex>
+                    <!-- 结束行坐标：excel行号，用数字表示 -->
+                    <endRowIndex>3</endRowIndex>
+                    <!-- 字段集合 -->
+                    <!-- 约定：字段名全部用双引号包裹；constStr()包裹的值代表常量字符串；constNum()包裹的值是常量数字；所有标点符号全部是英文半角输入法下的标点符号 
+                        1、字段名用英文双引号包裹，多个字段名用|分隔 2、列中如果赋值是常量值，用[]包裹，字段名和常量值用|分隔， 如：["常量字段名"|constStr(abc)]、["常量字段名"|constNum(12)]、[constNum(12)|"常量字段名"] 
+                        3、列中如果是函数表达式，用[]包裹，如：[add("字段A",constNum(3))]、[concat("字段A",constStr(a))] 
+                        4、如果要跨行或跨列展示，那么字段名为空即可，如："A"|"B"||"C" -->
+                    <fieldNames>"上月基金数量"|</fieldNames>
+                </target>
+				<!-- 指标 -->
+                <target>
+                    <!-- 数据集ID -->
+                    <dataSetID>data3</dataSetID>
+                    <!-- 数据起始行 -->
+                    <startDataIndex>0</startDataIndex>
+                    <!-- 写入方式：1代表单个单元格写入；2代表插入行或列；3代表追加行或列 -->
+                    <writeway>2</writeway>
+                    <!-- 写入方向：1代表纵向，2代表横向 -->
+                    <writedirection>2</writedirection>
+                    <!-- 过滤器：sql语句where后的子句 -->
+                    <filter></filter>
+                    <!-- 起始列坐标：excel列号，用大写字母表示 -->
+                    <startColIndex>G</startColIndex>
+                    <!-- 起始行坐标 ：excel行号，用数字表示 -->
+                    <startRowIndex>6</startRowIndex>
+                    <!-- 结束列坐标：excel列号，用大写字母表示 -->
+                    <endColIndex>G</endColIndex>
+                    <!-- 结束行坐标：excel行号，用数字表示 -->
+                    <endRowIndex>8</endRowIndex>
+                    <!-- 字段集合 -->
+                    <!-- 约定：字段名全部用双引号包裹；constStr()包裹的值代表常量字符串；constNum()包裹的值是常量数字；所有标点符号全部是英文半角输入法下的标点符号 
+                        1、字段名用英文双引号包裹，多个字段名用|分隔 2、列中如果赋值是常量值，用[]包裹，字段名和常量值用|分隔， 如：["常量字段名"constStr(abc)]、["常量字段名"|constNum(12)]、[constNum(12)|"常量字段名"] 
+                        3、列中如果是函数表达式，用[]包裹，如：[add("字段A",constNum(3))]、[concat("字段A",constStr(a))] 
+                        4、如果要跨行或跨列展示，那么字段名为空即可，如："A"|"B"||"C" -->
+                    <fieldNames>"报表日期"|["成立日期"CS(2017-02-20)]|"净值最新日期"|</fieldNames>
+                </target>
+				<!-- 指标 -->
+                <target>
+                    <!-- 数据集ID -->
+                    <dataSetID>data3</dataSetID>
+                    <!-- 数据起始行 -->
+                    <startDataIndex>0</startDataIndex>
+                    <!-- 写入方式：1代表单个单元格写入；2代表插入行或列；3代表追加行或列 -->
+                    <writeway>3</writeway>
+                    <!-- 写入方向：1代表纵向，2代表横向 -->
+                    <writedirection>2</writedirection>
+                    <!-- 过滤器：sql语句where后的子句 -->
+                    <filter></filter>
+                    <!-- 起始列坐标：excel列号，用大写字母表示 -->
+                    <startColIndex>I</startColIndex>
+                    <!-- 起始行坐标 ：excel行号，用数字表示 -->
+                    <startRowIndex>6</startRowIndex>
+                    <!-- 结束列坐标：excel列号，用大写字母表示 -->
+                    <endColIndex>K</endColIndex>
+                    <!-- 结束行坐标：excel行号，用数字表示 -->
+                    <endRowIndex>8</endRowIndex>
+                    <!-- 字段集合 -->
+                    <!-- 约定：字段名全部用双引号包裹；constStr()包裹的值代表常量字符串；constNum()包裹的值是常量数字；所有标点符号全部是英文半角输入法下的标点符号 
+                        1、字段名用英文双引号包裹，多个字段名用|分隔 2、列中如果赋值是常量值，用[]包裹，字段名和常量值用|分隔， 如：["常量字段名"|constStr(abc)]、["常量字段名"|constNum(12)]、[constNum(12)|"常量字段名"] 
+                        3、列中如果是函数表达式，用[]包裹，如：[add("字段A",constNum(3))]、[concat("字段A",constStr(a))] 
+                        4、如果要跨行或跨列展示，那么字段名为空即可，如："A"|"B"||"C" -->
+                    <fieldNames>"报表日期"|"成立日期"|"净值最新日期"|</fieldNames>
+                </target>
+				<!-- 指标 -->
+                <target>
+                    <!-- 数据集ID -->
+                    <dataSetID>data4</dataSetID>
+                    <!-- 数据起始行 -->
+                    <startDataIndex>3</startDataIndex>
+                    <!-- 写入方式：1代表单个单元格写入；2代表插入行或列；3代表追加行或列 -->
+                    <writeway>2</writeway>
+                    <!-- 写入方向：1代表纵向，2代表横向 -->
+                    <writedirection>1</writedirection>
+                    <!-- 过滤器：sql语句where后的子句 -->
+                    <filter></filter>
+                    <!-- 起始列坐标：excel列号，用大写字母表示 -->
+                    <startColIndex>C</startColIndex>
+                    <!-- 起始行坐标 ：excel行号，用数字表示 -->
+                    <startRowIndex>12</startRowIndex>
+                    <!-- 结束列坐标：excel列号，用大写字母表示 -->
+                    <endColIndex>E</endColIndex>
+                    <!-- 结束行坐标：excel行号，用数字表示 -->
+                    <endRowIndex>12</endRowIndex>
+                    <!-- 字段集合 -->
+                    <!-- 约定：字段名全部用双引号包裹；constStr()包裹的值代表常量字符串；constNum()包裹的值是常量数字；所有标点符号全部是英文半角输入法下的标点符号 
+                        1、字段名用英文双引号包裹，多个字段名用|分隔 2、列中如果赋值是常量值，用[]包裹，字段名和常量值用|分隔， 如：["常量字段名"|constStr(abc)]、["常量字段名"|constNum(12)]、[constNum(12)|"常量字段名"] 
+                        3、列中如果是函数表达式，用[]包裹，如：[add("字段A",constNum(3))]、[concat("字段A",constStr(a))] 
+                        4、如果要跨行或跨列展示，那么字段名为空即可，如："A"|"B"||"C" -->
+                    <fieldNames>"基金名称"|"基金经理"|"管理人"|</fieldNames>
+                </target>
+				<!-- 指标 -->
+                <target>
+                    <!-- 数据集ID -->
+                    <dataSetID>data4</dataSetID>
+                    <!-- 数据起始行 -->
+                    <startDataIndex>0</startDataIndex>
+                    <!-- 写入方式：1代表单个单元格写入；2代表插入行或列；3代表追加行或列 -->
+                    <writeway>3</writeway>
+                    <!-- 写入方向：1代表纵向，2代表横向 -->
+                    <writedirection>1</writedirection>
+                    <!-- 过滤器：sql语句where后的子句 -->
+                    <filter></filter>
+                    <!-- 起始列坐标：excel列号，用大写字母表示 -->
+                    <startColIndex>C</startColIndex>
+                    <!-- 起始行坐标 ：excel行号，用数字表示 -->
+                    <startRowIndex>15</startRowIndex>
+                    <!-- 结束列坐标：excel列号，用大写字母表示 -->
+                    <endColIndex>E</endColIndex>
+                    <!-- 结束行坐标：excel行号，用数字表示 -->
+                    <endRowIndex>23</endRowIndex>
+                    <!-- 字段集合 -->
+                    <!-- 约定：字段名全部用双引号包裹；constStr()包裹的值代表常量字符串；constNum()包裹的值是常量数字；所有标点符号全部是英文半角输入法下的标点符号 
+                        1、字段名用英文双引号包裹，多个字段名用|分隔 2、列中如果赋值是常量值，用[]包裹，字段名和常量值用|分隔， 如：["常量字段名"|constStr(abc)]、["常量字段名"|constNum(12)]、[constNum(12)|"常量字段名"] 
+                        3、列中如果是函数表达式，用[]包裹，如：[add("字段A",constNum(3))]、[concat("字段A",constStr(a))] 
+                        4、如果要跨行或跨列展示，那么字段名为空即可，如："A"|"B"||"C" -->
+                    <fieldNames>"基金名称"|[concat("基金经理",'abc')]|"管理人"|</fieldNames>
+                </target>
+			</targets>
+		</sheet>
+	</workbook>
+	<!-- 模板 -->
+	<template>
+		<!-- 模板名称 :excel文件的名称 -->
+		<name>F:/ismapp/test.xlsx</name>
+		<!-- 模板文件后缀 ：excel文件后缀名，带点，如：.xls,.xlsx -->
+		<suffix>.xlsx</suffix>
+		<!-- 模板文件内容：excel文件转换成base64之后的内容 -->
+		<content></content>
+		<!-- 文件输出路径 -->
+        <outPutDir>F:/ismapp</outPutDir>
+	</template>
+</excel>
